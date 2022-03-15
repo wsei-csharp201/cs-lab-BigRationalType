@@ -99,7 +99,7 @@ Sugeruję próbę samodzielnego rozwiązania w oparciu o instrukcje i podpowiedz
 * [Krok 2. Równość/tożsamość ułamków](step02.md)
     > określisz, kiedy dwa ułamki są sobie równe - tożsame, "takie same" (implementacja `IEquatable`, `IEquatable<Rational>`, generowanie _hashkodu_, przeciążenie operatorów `==` oraz `!=`), utworzysz testy jednostkowe
 
-* [Krok 3. Operacje arytmetyczne](step03.md)
+* [Krok 3. Operacje arytmetyczne na ułamkach](step03.md)
     > zdefiniujesz podstawowe działania arytmetyczne na ułamkach (przeciążenie operatorów arytmetycznych `+`, `*`, ... ) oraz wybrane funkcje użytkowe (`Min`, `Max`, `Pow`, ...) wzorując się na wbudowanych typach liczbowych, utworzysz testy jednostkowe
 
 * [Krok 4. Porównywanie ułamków](step04.md)
@@ -108,7 +108,7 @@ Sugeruję próbę samodzielnego rozwiązania w oparciu o instrukcje i podpowiedz
 * [Krok 5. Konwersje](step05.md)
     > zdefiniujesz mechanizmy konwersji (jawnej, niejawnej) z i do ułamka, utworzysz testy jednostkowe
 
-* [Krok 6. Rozszerzenia klasy `Rational`](step06.md)
+* [Krok 6. Rozszerzenia klasy `BigRational`](step06.md)
     > poznasz mechanizmy rozszerzania funkcjonalności wcześniej zaprojektowanej klasy
 
 * Krok 7. Refaktoryzacja i dokumentacja kodu

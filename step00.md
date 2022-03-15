@@ -95,8 +95,4 @@ W tym kroku skonfigurujesz œrodowisko projektu - utworzysz _solution_ oraz 3 pro
 
 ---
 
-* Pliki z kodem po wykonaniu kroku: [./step00-solution/solution_snapshot](./step00-solution/solution_snapshot)
-
----
-
 [Pocz¹tek](README.md) | [Krok nastêpny](step01.md)
