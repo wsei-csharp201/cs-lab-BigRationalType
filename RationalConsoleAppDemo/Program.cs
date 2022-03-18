@@ -1,4 +1,5 @@
 ﻿using RationalLib;
 using static System.Console;
+using System.Numerics;
 
-WriteLine("Hello");
+WriteLine(default(BigRational));
