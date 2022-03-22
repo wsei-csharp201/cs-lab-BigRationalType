@@ -10,13 +10,16 @@ namespace RationalLib
         public readonly BigInteger Numerator { get; init; } = 0;// C#9
         public readonly BigInteger Denominator { get; init; } = 1;// C#9
 
-
         #region constants
+        private static string POSITIVE_INFINITY = "+Infinity";
+        private static string NEGATIVE_INFINITY = "-Infinity";
+        private static string NAN = "NaN";
+
         public static BigRational Zero { get; } = new(0); // 0/1
         public static BigRational One { get;  } = new(1); // 1/1
         public static BigRational Half { get; } = new(1, 2); // 1/2
 
-        public static BigRational NaN { get; } = new(0,0); // 0/0
+        public static BigRational NaN { get; } = default; // 0/0
         public static BigRational PositiveInfinity { get; } = new(1, 0);  // a/0, a > 0
         public static BigRational NegativeInfinity { get; } = new(-1, 0); // a/0, a < 0
         #endregion
@@ -97,9 +100,9 @@ namespace RationalLib
 
         public override string ToString() // => $"{Numerator}/{Denominator}";
         {
-            if (IsNaN(this)) return "NaN";
-            if (IsPositiveInfinity(this)) return "+Infinity";
-            if (IsNegativeInfinity(this)) return "-Infinity";
+            if (IsNaN(this)) return NAN;
+            if (IsPositiveInfinity(this)) return POSITIVE_INFINITY;
+            if (IsNegativeInfinity(this)) return NEGATIVE_INFINITY;
 
             return $"{Numerator}/{Denominator}";
         }

@@ -1,7 +1,7 @@
 # Ćwiczenie - implementacja ułamków w C#
 
 * Autor: _Krzysztof Molenda_
-* Wersja: 1.4 (2021.03.16)
+* Wersja: 1.45 (2022.03.16)
 
 Twoim zadaniem jest realizacja w C# typu `Rational`, reprezentującego matematyczną koncepcję liczby wymiernej. Realizacja typu powinna być spójna, kompletna, dobrze udokumentowana i przetestowana. Powinna dostarczać naturalnych dla użytkownika mechanizmów użycia (naturalnych, tzn. jak w matematyce oraz podobnych do tych, które stosowane są w analogicznych konstrukcjach języka C#).
 
@@ -74,14 +74,14 @@ Założenia ogólne dotyczące implementacji typu `Rational`:
 
 ## Etapy realizacji
 
-W poniższym opracowaniu przedstawione są etapy realizacji typu w wariancie `BigRational`. Po zakończeniu ćwiczenia sugerowane jest - dla utrwalenia wiedzy i umiejętności - realizacja typów w wariantach `Rational32` oraz `Rational64`. Pojawią się drobne różnice i niuanse implementacyjne.
+W poniższym opracowaniu przedstawione są etapy realizacji typu w wariancie `BigRational`. Po zakończeniu ćwiczenia sugerowane jest - dla utrwalenia wiedzy i umiejętności - realizacja typu w wariantach `Rational32` oraz `Rational64`. Pojawią się drobne różnice i niuanse implementacyjne.
 
 Zachęcam do zapoznania się z kodem źródłowym implementacji bibliotecznych struktur:
 
 * [`BigInteger`](https://github.com/microsoft/referencesource/blob/master/System.Numerics/System/Numerics/BigInteger.cs) - struktura bazowa do realizacji typu `BigRational`
 * [`Complex`](https://github.com/microsoft/referencesource/blob/master/System.Numerics/System/Numerics/Complex.cs) - struktura podobna do `Rational` - też para liczb, ale o innej interpretacji
-* Niezależnej realizacji typu: <https://github.com/tompazourek/Rationals>
-
+* Niezależnej realizacji typu: <https://github.com/tompazourek/Rationals> - udostepnionej w formie pakietu NuGet - implementacja nieznacznie różni się od prezentowanej tutaj
+* Niezależnej realizacji typu, poddanej ocenie przez uzytkowników Stack Overflow <https://codereview.stackexchange.com/questions/95681/rational-number-implementation>
 
 
 Zadanie zrealizuj w Visual Studio 2022 i .Net6. Możesz również wykorzystać lekkie środowisko VS Code lub JetBrains Rider.

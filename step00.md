@@ -2,9 +2,9 @@
 
 W tym kroku skonfigurujesz œrodowisko projektu - utworzysz _solution_ oraz 3 projekty: typu _Class Library_, typu _Console application_ oraz typu _Unit test_.
 
-1. Utwórz projekt o nazwie `RationalLib` typu _Class Library_ oraz solution o nazwie `Rational`.
+1. Utwórz projekt o nazwie `RationalLib` typu _Class Library_ oraz solution o nazwie `RationalType`.
 
-    > W ramach Twojego _solution_ bêdziesz korzysta³ z wielu projektów - m. in. projektu testuj¹cego (_Unit Tests_) czy projektu z aplikacj¹ próbn¹. Zatem powinieneœ mieæ _solution_ z mo¿liwoœci¹ utworzenia wielu projektów.
+    > W ramach Twojego _solution_ bêdziesz korzysta³ z wielu projektów - m.in. projektu testuj¹cego (_Unit Tests_) czy projektu z aplikacj¹ próbn¹. Zatem powinieneœ mieæ _solution_ z mo¿liwoœci¹ utworzenia wielu projektów.
 
 2. Dodaj do _solution_ projekt typu _Unit Tests_. Nadaj mu nazwê `RationalUnitTests`. W klasach tego projektu tworzyæ bêdziesz kod testów jednostkowych dla projektu `RationalLib`, zaœ uruchamiaæ je w _Test Explorer_.
    > Wykorzystujemy domyœlne œrodowisko testów jednostkowych Microsoft MSTest v2.
@@ -15,7 +15,7 @@ W tym kroku skonfigurujesz œrodowisko projektu - utworzysz _solution_ oraz 3 pro
 3. W _solution_ utwórz jeszcze jeden projekt typu _Console application_
    o nazwie `RationalConsoleAppDemo`. (Wybierz .NET6 lub wy¿szy). Uczyñ ten projekt aktywnym.
 
-   W projekcie tym bêdziesz zapisywa³ proste fragmenty kodu testuj¹cego projektowan¹ klasê.
+   W projekcie tym bêdziesz zapisywa³ proste fragmenty kodu weryfikuj¹cego niektóre z funkcjonalnoœci projektowanej klasy.
 
    Dodaj referencjê do projektu `RationalLib` oraz wpisz w wygenerowanym `Program.cs`:
 
