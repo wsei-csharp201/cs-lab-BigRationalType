@@ -40,7 +40,7 @@ Platformy .NET dostarczają predefiniowane typy liczbowe:
 
 * `Complex` - reprezentacja liczby zespolonej - w przestrzeni nazw `System.Numerics`
 
-W standardowych bibliotekach .NET (C#) jednak nie ma typu realizującego koncepcję ułamka (`Rational`).  Jej implementacja jest za to w pakiecie [Microsoft Solver Foundation](https://msdn.microsoft.com/en-us/library/microsoft.solverfoundation.common.rational(v=vs.93).aspx), zrealizowana w formie struktury, w dość specyficzny sposób i z bardzo ubogą dokumentacją (prawdopodobnie tylko dla potrzeb narzędzia *Solver*). Implementacja ta nie jest rozwijana/utrzymywana.
+W standardowych bibliotekach .NET (C#) jednak nie ma typu realizującego koncepcję ułamka (`Rational`). Jej implementacja jest za to w pakiecie [Microsoft Solver Foundation](https://msdn.microsoft.com/en-us/library/microsoft.solverfoundation.common.rational), zrealizowana w formie struktury, w dość specyficzny sposób i z bardzo ubogą dokumentacją (prawdopodobnie tylko dla potrzeb narzędzia *Solver*). Implementacja ta nie jest rozwijana/utrzymywana.
 
 Przy tworzeniu specjalistycznego oprogramowania może okazać się potrzebną realizacja typu `Rational`, np. do prezentacji liczb w formie ułamkowej, do wykonania obliczeń dokładnych na ułamkach.
 
@@ -70,11 +70,19 @@ Założenia ogólne dotyczące implementacji typu `Rational`:
 
 8. Dokumentacja API w `html`.
 
-9. W miarę możliwości należy wykorzystać nowe możliwości C# (C#8, ...).
+9. W miarę możliwości należy wykorzystać nowe możliwości C# (C#8 i wyżej).
 
 ## Etapy realizacji
 
-W poniższym opracowaniu przedstawione są etapy realizacji typu w wariancie `BigRational`. Po zakończeniu ćwiczenia sugerowane jest - dla utrwalenia wiedzy i umiejętności - realizacja typów w wariantach `Rational32` oraz `Rational32`.
+W poniższym opracowaniu przedstawione są etapy realizacji typu w wariancie `BigRational`. Po zakończeniu ćwiczenia sugerowane jest - dla utrwalenia wiedzy i umiejętności - realizacja typów w wariantach `Rational32` oraz `Rational64`. Pojawią się drobne różnice i niuanse implementacyjne.
+
+Zachęcam do zapoznania się z kodem źródłowym implementacji bibliotecznych struktur:
+
+* [`BigInteger`](https://github.com/microsoft/referencesource/blob/master/System.Numerics/System/Numerics/BigInteger.cs) - struktura bazowa do realizacji typu `BigRational`
+* [`Complex`](https://github.com/microsoft/referencesource/blob/master/System.Numerics/System/Numerics/Complex.cs) - struktura podobna do `Rational` - też para liczb, ale o innej interpretacji
+* Niezależnej realizacji typu: <https://github.com/tompazourek/Rationals>
+
+
 
 Zadanie zrealizuj w Visual Studio 2022 i .Net6. Możesz również wykorzystać lekkie środowisko VS Code lub JetBrains Rider.
 
@@ -114,5 +122,5 @@ Sugeruję próbę samodzielnego rozwiązania w oparciu o instrukcje i podpowiedz
 * Krok 7. Refaktoryzacja i dokumentacja kodu
     > uporządkujesz kod czyniąc go bardziej czytelnym i łatwiejszym do zarządzania, wprowadzisz optymalizacje, opracujesz/uzupełnisz dokumentację, wygenerujesz dokumentację w `html`
 
-* Krok ostatni. Zadania i wyzwania
-    > na bazie zrealizowanego projektu rozwiążesz zadania o podobnym charakterze
+* Krok ostatni. Przygotowanie biblioteki. Publikacja biblioteki jako pakietu NuGet
+    > <https://docs.microsoft.com/pl-pl/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli>

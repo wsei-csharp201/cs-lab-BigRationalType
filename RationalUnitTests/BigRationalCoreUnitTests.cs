@@ -82,7 +82,7 @@ namespace RationalUnitTests
             var u = new BigRational();
 
             Assert.AreEqual(0, u.Numerator);
-            Assert.AreEqual(0, u.Denominator);
+            Assert.AreEqual(1, u.Denominator);
         }
 
         [TestMethod, TestCategory("Constans")]

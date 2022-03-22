@@ -4,20 +4,21 @@ global using System.Numerics;
 
 namespace RationalLib
 {
+
     public readonly struct BigRational // readonly struct in C#7.2
     {
-        public readonly BigInteger Numerator { get; init; } // C#9
-        public readonly BigInteger Denominator { get; init; } // C#9
+        public readonly BigInteger Numerator { get; init; } = 0;// C#9
+        public readonly BigInteger Denominator { get; init; } = 1;// C#9
 
 
         #region constants
-        public static readonly BigRational Zero = new(0, 1); // 0/1
-        public static readonly BigRational One  = new(1, 1); // 1/1
-        public static readonly BigRational Half = new(1, 2); // 1/2
+        public static BigRational Zero { get; } = new(0); // 0/1
+        public static BigRational One { get;  } = new(1); // 1/1
+        public static BigRational Half { get; } = new(1, 2); // 1/2
 
-        public static readonly BigRational NaN  = new(0, 0); // 0/0, default value of type
-        public static readonly BigRational PositiveInfinity = new(1, 0);  // a/0, a > 0
-        public static readonly BigRational NegativeInfinity = new(-1, 0); // a/0, a < 0
+        public static BigRational NaN { get; } = new(0,0); // 0/0
+        public static BigRational PositiveInfinity { get; } = new(1, 0);  // a/0, a > 0
+        public static BigRational NegativeInfinity { get; } = new(-1, 0); // a/0, a < 0
         #endregion
 
         #region ctor's
@@ -78,17 +79,7 @@ namespace RationalLib
             : this(value, 1)
         { }
 
-        public BigRational() : this( BigRational.NaN ) { }
-
-        public BigRational(long numerator, long denominator = 1)
-            : this((BigInteger)numerator, (BigInteger)denominator)
-        { }
-
-        public BigRational(ulong numerator, ulong denominator = 1)
-            : this((BigInteger)numerator, (BigInteger)denominator)
-        { }
-
-        private BigRational(BigRational instance) => this = instance;     
+        public BigRational() : this( 0, 1 ) { }     
         #endregion
 
 
