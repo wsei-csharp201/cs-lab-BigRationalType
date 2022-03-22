@@ -85,28 +85,28 @@ namespace RationalUnitTests
             Assert.AreEqual(1, u.Denominator);
         }
 
-        [TestMethod, TestCategory("Constans")]
+        [TestMethod, TestCategory("Constants")]
         public void Rational_Zero_as_static_value_Numerator_equal_0_and_Denominator_equal_1()
         {
             Assert.AreEqual(0, (BigRational.Zero).Numerator);
             Assert.AreEqual(1, (BigRational.Zero).Denominator);
         }
 
-        [TestMethod, TestCategory("Constans")]
+        [TestMethod, TestCategory("Constants")]
         public void Rational_One_as_static_value_Numerator_equal_1_and_Denominator_equal_1()
         {
             Assert.AreEqual(1, BigRational.One.Numerator);
             Assert.AreEqual(1, BigRational.One.Denominator);
         }
 
-        [TestMethod, TestCategory("Constans")]
+        [TestMethod, TestCategory("Constants")]
         public void Rational_Half_as_static_value_Numerator_equal_1_and_Denominator_equal_2()
         {
             Assert.AreEqual(1, BigRational.Half.Numerator);
             Assert.AreEqual(2, BigRational.Half.Denominator);
         }
 
-        [TestMethod, TestCategory("Constans")]
+        [TestMethod, TestCategory("Constants")]
         public void Rational_NaN_as_static_value_Numerator_equal_0_and_Denominator_equal_0()
         {
             Assert.AreEqual(0, BigRational.NaN.Numerator);
@@ -180,11 +180,6 @@ namespace RationalUnitTests
             var u = new BigRational(numerator, denominator);
             Assert.AreEqual(response, BigRational.IsNegativeInfinity(u));
         }
-
-
-
-
-
 
 
         [DataTestMethod]

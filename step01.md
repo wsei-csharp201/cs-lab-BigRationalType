@@ -79,7 +79,7 @@ Będziesz intensywnie korzystał z typu [`BigInteger`](https://docs.microsoft.co
 
     Proces upraszczania należy umieścić w konstruktorach po to, by zapamiętany ułamek był już nieskracalny.
 
-6. Zaimplementuj stałe ułamki: `ZERO` (jako `0/1`), `ONE` (jako `1/1`) oraz `HALF` (jako `1/2`).
+6. Zaimplementuj stałe ułamki: `NaN` (jako `0/0`), `Zero` (jako `0/1`), `One` (jako `1/1`) oraz `Half` (jako `1/2`).
 
 7. Ponieważ testów jednostkowy dla Twojej klasy będzie dużo, rozbij je na wiele klas i plików. Dla potrzeb testowania podstawowej funkcjonalności z tego kroku, zmień nazwę klasy testującej np. na `BigRationalCoreUnitTests`.
 
@@ -132,7 +132,7 @@ Funkcjonalności z tej części mogą być zrealizowane już teraz, ale w niekt�
     > Zastanów się i zaimplementuj zgłaszanie odpowiednich wyjątków.
 
 
-3. Zaimplementuj konwersję `BigRational` do typu `double` (`ToDouble()`), `float` (`ToSingle()`) oraz `decimal` (`ToDecimal()`).
+3. Zaimplementuj konwersję `BigRational` do typu `double` (`ToDouble()`), `float` (`ToSingle()`) oraz `decimal` (`ToDecimal()`). Musisz rozważyć dokładność konwersji.
 
 4. Zaimplementuj konstruktor `BigRational(double)` oraz `BigRational(decimal)` tak, aby korespondował z wcześniej opracowanymi konwersjami do tych typów.
 
@@ -146,7 +146,7 @@ Funkcjonalności z tej części mogą być zrealizowane już teraz, ale w niekt�
 
 2. Do konwersji z `string` do `BigRational` będziesz musiał parsować napis. Rozważ zastosowanie metody [string.Split](https://docs.microsoft.com/pl-pl/dotnet/csharp/how-to/parse-strings-using-split). Możesz również zastosować [wyrażenia regularne (REGEX)](https://docs.microsoft.com/pl-pl/dotnet/standard/base-types/regular-expressions).
 
-3. Zadania dotyczące konwersji na inne typy liczbowe powtórzysz przy implementacji operatorów konwersji jawnej (rzutowanie) i niejawnej, w kolejnych krokach. Teraz wykonaj te implementacje i opracuj testy jednostkowe. Później, gdy będziesz refaktoryzował kod, testy będą "pilnowały" jego poprawności.
+3. Zadania dotyczące konwersji na inne typy liczbowe powtórzysz przy implementacji operatorów konwersji jawnej (rzutowanie) i niejawnej, w kolejnych krokach. Teraz możesz wykonać te implementacje i opracować testy jednostkowe. Później, gdy będziesz refaktoryzował kod, testy będą "pilnowały" jego poprawności.
 
 ---
 

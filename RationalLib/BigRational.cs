@@ -11,9 +11,9 @@ namespace RationalLib
         public readonly BigInteger Denominator { get; init; } = 1;// C#9
 
         #region constants
-        private static string POSITIVE_INFINITY = "+Infinity";
-        private static string NEGATIVE_INFINITY = "-Infinity";
-        private static string NAN = "NaN";
+        private static readonly string POSITIVE_INFINITY = "+Infinity";
+        private static readonly string NEGATIVE_INFINITY = "-Infinity";
+        private static readonly string NAN = "NaN";
 
         public static BigRational Zero { get; } = new(0); // 0/1
         public static BigRational One { get;  } = new(1); // 1/1
