@@ -81,7 +81,7 @@ Zachęcam do zapoznania się z kodem źródłowym implementacji bibliotecznych s
 * [`BigInteger`](https://github.com/microsoft/referencesource/blob/master/System.Numerics/System/Numerics/BigInteger.cs) - struktura bazowa do realizacji typu `BigRational`
 * [`Complex`](https://github.com/microsoft/referencesource/blob/master/System.Numerics/System/Numerics/Complex.cs) - struktura podobna do `Rational` - też para liczb, ale o innej interpretacji
 * Niezależnej realizacji typu: <https://github.com/tompazourek/Rationals> - udostepnionej w formie pakietu NuGet - implementacja nieznacznie różni się od prezentowanej tutaj
-* Niezależnej realizacji typu, poddanej ocenie przez uzytkowników Stack Overflow <https://codereview.stackexchange.com/questions/95681/rational-number-implementation>
+* Niezależnej realizacji typu, poddanej ocenie przez użytkowników Stack Overflow <https://codereview.stackexchange.com/questions/95681/rational-number-implementation>
 
 
 Zadanie zrealizuj w Visual Studio 2022 i .Net6. Możesz również wykorzystać lekkie środowisko VS Code lub JetBrains Rider.
@@ -107,11 +107,11 @@ Sugeruję próbę samodzielnego rozwiązania w oparciu o instrukcje i podpowiedz
 * [Krok 2. Równość/tożsamość ułamków](step02.md)
     > określisz, kiedy dwa ułamki są sobie równe - tożsame, "takie same" (implementacja `IEquatable`, `IEquatable<Rational>`, generowanie _hashkodu_, przeciążenie operatorów `==` oraz `!=`), utworzysz testy jednostkowe
 
-* [Krok 3. Operacje arytmetyczne na ułamkach](step03.md)
-    > zdefiniujesz podstawowe działania arytmetyczne na ułamkach (przeciążenie operatorów arytmetycznych `+`, `*`, ... ) oraz wybrane funkcje użytkowe (`Min`, `Max`, `Pow`, ...) wzorując się na wbudowanych typach liczbowych, utworzysz testy jednostkowe
-
-* [Krok 4. Porównywanie ułamków](step04.md)
+* [Krok 3. Porównywanie ułamków](step03.md)
     > zdefiniujesz podstawowe operatory relacyjne (implementacja `IComparable<Rational>`, przeciążenie operatorów `<`, `>`), utworzysz testy jednostkowe
+
+* [Krok 4. Operacje arytmetyczne na ułamkach](step04.md)
+    > zdefiniujesz podstawowe działania arytmetyczne na ułamkach (przeciążenie operatorów arytmetycznych `+`, `*`, ... ) oraz wybrane funkcje użytkowe (`Min`, `Max`, `Pow`, ...) wzorując się na wbudowanych typach liczbowych, utworzysz testy jednostkowe
 
 * [Krok 5. Konwersje](step05.md)
     > zdefiniujesz mechanizmy konwersji (jawnej, niejawnej) z i do ułamka, utworzysz testy jednostkowe

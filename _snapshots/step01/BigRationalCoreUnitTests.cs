@@ -1,8 +1,6 @@
-global using System;
-global using System.Numerics;
-global using Microsoft.VisualStudio.TestTools.UnitTesting;
-global using RationalLib;
-
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RationalLib;
+using System.Numerics;
 
 namespace RationalUnitTests
 {

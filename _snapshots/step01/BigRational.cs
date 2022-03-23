@@ -5,7 +5,7 @@ global using System.Numerics;
 namespace RationalLib
 {
 
-    public readonly partial struct BigRational // readonly struct in C#7.2
+    public readonly struct BigRational // readonly struct in C#7.2
     {
         public readonly BigInteger Numerator { get; init; } = 0;// C#9
         public readonly BigInteger Denominator { get; init; } = 1;// C#9
