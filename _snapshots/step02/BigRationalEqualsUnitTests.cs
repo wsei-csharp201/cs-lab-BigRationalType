@@ -170,5 +170,22 @@ namespace RationalUnitTests
 
         #endregion
 
+
+        #region Sytuacje specjalne z `NaN`
+
+        [DataTestMethod]
+        [DataRow(0, 0)]  //NaN
+        [DataRow(1, 0)]  //+Infinity
+        [DataRow(-1, 0)] //-Infinity
+        [DataRow(1, 3)]
+        public void Equals_NaN_daje_zawsze_false(int numerator, int denominator)
+        {
+            BigRational u = new (numerator, denominator);
+            Assert.IsFalse(u.Equals(BigRational.NaN));
+            Assert.IsFalse( u == BigRational.NaN );
+            Assert.IsFalse( (BigRational.NaN).Equals(u) );
+            Assert.IsFalse(BigRational.NaN == u);
+        }
+        #endregion
     }
 }

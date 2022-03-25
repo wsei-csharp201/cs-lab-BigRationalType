@@ -82,12 +82,16 @@ namespace RationalLib
             : this(value, 1)
         { }
 
-        public BigRational() : this( 0, 1 ) { }     
+        public BigRational() : this( 0, 1 ) { }
         #endregion
 
 
         #region accessor methods
-        public static bool IsNaN(BigRational fraction) => fraction.Equals(NaN); // fraction == NaN
+
+        // nie wolno uzywać NaN do jakichkolwiek działań, np. porównań
+        // dlatego porównania pole po polu
+
+        public static bool IsNaN(BigRational fraction) => fraction.Numerator == 0 && fraction.Denominator == 0; // fraction == NaN
 
         public static bool IsPositiveInfinity(BigRational fraction) => fraction.Equals(PositiveInfinity);
 

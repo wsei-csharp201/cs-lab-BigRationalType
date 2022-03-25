@@ -11,7 +11,11 @@ namespace RationalLib
     public readonly partial struct BigRational : IEquatable<BigRational>
     {
         public bool Equals(BigRational other)
-        {            
+        {
+            if( (this.Numerator == 0 && this.Denominator == 0)
+                || (other.Numerator == 0 && other.Denominator == 0) )
+                return false;
+
             return (Numerator == other.Numerator && Denominator == other.Denominator);
         }
 

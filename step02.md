@@ -40,6 +40,8 @@ Wykonuj zadania w podanej kolejności. Wykorzystaj technikę TDD (_Test Driven D
 
 9. Opracuj testy jednostkowe.
 
+10. Zwróć uwagę na sytuacje specjalne (`NaN`, `+Infinity`, `-Infinity`). W C# w typie zmiennoprzecinkowym jakakolwiek relacja z `NaN` daje w efekcie `false`!
+
 ### Podpowiedzi
 
 1. Poczytaj o przesłanianiu `Equals` w C#:

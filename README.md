@@ -110,11 +110,11 @@ Sugeruję próbę samodzielnego rozwiązania w oparciu o instrukcje i podpowiedz
 * [Krok 3. Porównywanie ułamków](step03.md)
     > zdefiniujesz podstawowe operatory relacyjne (implementacja `IComparable<Rational>`, przeciążenie operatorów `<`, `>`), utworzysz testy jednostkowe
 
-* [Krok 4. Operacje arytmetyczne na ułamkach](step04.md)
-    > zdefiniujesz podstawowe działania arytmetyczne na ułamkach (przeciążenie operatorów arytmetycznych `+`, `*`, ... ) oraz wybrane funkcje użytkowe (`Min`, `Max`, `Pow`, ...) wzorując się na wbudowanych typach liczbowych, utworzysz testy jednostkowe
-
-* [Krok 5. Konwersje](step05.md)
+* [Krok 4. Konwersje](step04.md)
     > zdefiniujesz mechanizmy konwersji (jawnej, niejawnej) z i do ułamka, utworzysz testy jednostkowe
+
+* [Krok 5. Operacje arytmetyczne na ułamkach](step05.md)
+    > zdefiniujesz podstawowe działania arytmetyczne na ułamkach (przeciążenie operatorów arytmetycznych `+`, `*`, ... ) oraz wybrane funkcje użytkowe (`Min`, `Max`, `Pow`, ...) wzorując się na wbudowanych typach liczbowych, utworzysz testy jednostkowe
 
 * [Krok 6. Rozszerzenia klasy `BigRational`](step06.md)
     > poznasz mechanizmy rozszerzania funkcjonalności wcześniej zaprojektowanej klasy
